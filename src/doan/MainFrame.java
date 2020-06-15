@@ -66,13 +66,13 @@ public void xuLy()
 {
                                        
 					
-					int a = 10 * 15;
-					int b = 23* 15;
-                                        int c = 15 * 15;
-                                        int d = 20 * 15;
-                                        int e = 22 *15;
+					int a = 10 * 5;
+					int b = 103* 5;
+                                        int c = 15 * 5;
+                                        int d = 100 * 5;
+                                        int e = 22 *5;
                                         
-                                        int x = 2*15;
+                                        int x = 2*5;
                                         
 					
                                                 
