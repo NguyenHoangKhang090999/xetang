@@ -11,6 +11,7 @@ package doan;
  */
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -20,7 +21,7 @@ import javax.swing.*;
  */
 public class MainFrame extends JFrame implements ActionListener {
 
-    
+    Transformation tm =new Transformation();
     Surface sf = new Surface();
 
     JLabel label4 = new JLabel();
@@ -36,70 +37,46 @@ public class MainFrame extends JFrame implements ActionListener {
     }
     public void initUI()
     {
-                this.setSize(1520, 820);
+                this.setSize(1350, 800);
                 this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                this.setTitle("KTDH - NHOM 13");
+                this.setTitle("TANK");
                 
-                bt4.setText("Ve hinh");
+                bt4.setText("PLAY");
 		bt4.setBounds(70,580, 150, 40);
 		bt4.setBorder(BorderFactory.createBevelBorder(1));
 		bt4.setFocusable(false);
 		bt4.setFont(new Font("Ink Free", Font.CENTER_BASELINE, 16));
-                
-            
-                
-		
+               
                 this.add(label4);
-               
-              
-		
-               
-                
-     
-                // nut 4
+          
                 this.add(bt4);
-                bt4.setActionCommand("Ve hinh");
+                bt4.setActionCommand("PLAY");
                     this.add(sf);
 		bt4.addActionListener(this);
     }
 public void xuLy()
 {
-                                       
-					
-					int a = 10 * 5;
-					int b = 103* 5;
-                                        int c = 15 * 5;
-                                        int d = 100 * 5;
-                                        int e = 22 *5;
-                                        
-                                        int x = 2*5;
-                                        
-					
-                                                
-						sf.a = a;
-						sf.b = b;
-                                                sf.c = c;
-                                                sf.d = d;
-                                                sf.e = e;
-						System.out.println(sf.a);
-						System.out.println(sf.b);
-                                                System.out.println(sf.c);
-						System.out.println(sf.d);
-						sf.repaint();
+	System.out.println(sf.a);
+        System.out.println(sf.b);
+        System.out.println(sf.c);
+	System.out.println(sf.d);
+	sf.repaint();
 									
-			}
+}
 
     @Override
     public void actionPerformed(ActionEvent e) {
 
-         if("Ve hinh".equals(e.getActionCommand()))
+         if("PLAY".equals(e.getActionCommand()))
         {
-            sf.index=1;
-            xuLy();
-            
+           xuLy();
+     
         }
+}
+
+
             
-    }
+    
     
   public static void main(String []args) {
             EventQueue.invokeLater(new Runnable() {
